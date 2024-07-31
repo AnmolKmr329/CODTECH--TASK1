@@ -1,0 +1,60 @@
+//Quiz problem Task 1Develop a quiz game that presents multiple choice questions to the user.The Game Should keep track of the users score and provide feedback based on their answers.
+#include<stdio.h>
+
+int main() {
+    printf("It IS Science quiz: \n");
+    printf("====================================\n");
+    int right = 0;
+    printf("Maximum marks 10\n");
+    char input[10];
+
+    printf("Q1: Which planet is twin of earth?\na) Mercury\nb)venus\nc)jupiter\nd)saturn\n");
+    scanf(" %c", &input[0]);
+    if (input[0] == 'b') right++;
+
+    printf("Q2: What is the SI unit of current?\na) Ampere\b)coulomb\nc) Ohm\nd) None of the above\n");
+    scanf(" %c", &input[1]);
+    if (input[1] == 'a') right++;
+
+    printf("Q3: Which is the hardest substance on earth?\na) Graphite\nb) coal\nc)Diamond \nd) None of these\n");
+    scanf(" %c", &input[2]);
+    if (input[2] == 'c') right++;
+
+    printf("Q4: How many bones are in human body?\na) 170\nb) 190\nc) 138\nd) 206\n");
+    scanf(" %c", &input[3]);
+    if (input[3] == 'd') right++;
+
+    printf("Q5: Which is the softest element?\na)Sodium\nb) Carbon\nc) Copper\nd)None of these\n");
+    scanf(" %c", &input[4]);
+    if (input[4] == 'a') right++;
+
+    printf("Q6: Who discovered cell?\na) Robert Hooke\nb) Charles Darwin\nc) Stephen jay\nd) None of these\n");
+    scanf(" %c", &input[5]);
+    if (input[5] == 'a') right++;
+
+    printf("Q7: The light year is measurement unit in terms of?\na) Force\nb) Time\nc) Distance\nd) Speed\n");
+    scanf(" %c", &input[6]);
+    if (input[6] == 'c') right++;
+
+    printf("Q8: Which of the following are diode?\na) Zener Diode\nbPhoto diode\nc) LED\nd)All of these\n");
+    scanf(" %c", &input[7]);
+    if (input[7] == 'd') right++;
+
+    printf("Q9: IN which year isro established?\na)1958\nb)1947\nc) 1969\nd) 1984\n");
+    scanf(" %c", &input[8]);
+    if (input[8] == 'c') right++;
+
+    printf("Q10: In which liquid phase iron will float?\na) Water \nb) Mercury\nc)Salt water\nd)None of these \n");
+    scanf(" %c", &input[9]);
+    if (input[9] == 'b') right++;
+
+    printf("Your score: %d\n", right);
+
+    printf("Feedback:\n");
+    if (right == 10) printf("Excellent job! Perfect score, well done!\n");
+    else if (right == 8 || right == 9) printf("Great work, very impressive!\n");
+    else if (right == 7 || right == 6) printf("Good job! You're on the right track!\n");
+    else if (right <= 5) printf("Keep practicing and you'll improve!\n");
+
+    return 0;
+}
